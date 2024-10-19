@@ -1,0 +1,19 @@
+# WeatherApp
+initgit
+add
+README.mdgit
+commit
+-m
+first commit
+git
+branch
+-M
+maingit
+remote
+add
+origin
+https://github.com/vijaykumar7379/WeatherApp.gitgit
+push
+-u
+origin
+main
