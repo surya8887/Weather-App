@@ -71,12 +71,12 @@ function App() {
         (error) => {
           console.error("Error getting location:", error);
           alert(
-            "Unable to retrieve your location. Please check your location settings."
+            "Unable to fetch your location."
           );
         }
       );
     } else {
-      alert("Geolocation is not supported by this browser.");
+      alert("Geolocation is not fetch.");
     }
   };
 

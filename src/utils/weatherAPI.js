@@ -1,12 +1,15 @@
 export const fetchWeatherData = async (location) => {
-  const apiKey = '2d5574132e0721b063565596af29fe9e';
+  const apiKey = '2d5574132e0721b063565596af29fe9e';     // Enter  your API key here
+
   
   try {
       let url;
 
-      // Check if location is an object with lat and lon
+      
       if (typeof location === 'object' && location.lat && location.lon) {
+        
           // Fetch weather data using latitude and longitude
+
           url = `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&appid=${apiKey}`;
       } else {
           // Otherwise, assume it's a city name
@@ -21,6 +24,8 @@ export const fetchWeatherData = async (location) => {
       }
 
       const data = await response.json();
+    
+      
     
       // Ensure the data has the expected structure
       if (!data.main || !data.weather || data.weather.length === 0) {
